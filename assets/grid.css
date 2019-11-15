@@ -1,0 +1,29 @@
+.flashcards {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    column-gap: 8px;
+    row-gap: 8px;
+    margin-bottom: 8px;
+}
+    .element-2 {
+        grid-column-start: -2;
+    }
+    .element-5,
+    .element-13 {
+        grid-column-start: 13;
+    }
+    .element-hf,
+    .element-rf {
+        grid-column-start: 4;
+    }
+    .element-la,
+    .element-ac {
+        grid-column-start: 3;
+    }
+    .element-uue {
+        display: none;
+    }
+.lanth-row {
+    margin-top: 24px;
+}
+    
