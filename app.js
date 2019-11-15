@@ -11,19 +11,15 @@ function init(data) {
 
     const __lanthanides = [...order].slice(56,71);
     const __actinides = [...order].slice(88,103);
-    const __allothers = order.filter(e => elements[e].category !== 'lanthanide' && elements[e].category !== 'actinide');
+    const __allothers = order.filter(e => 
+        elements[e].category !== 'lanthanide' && elements[e].category !== 'actinide'
+    );
     
-    const others = __allothers.map( el => {
-        return elemMkp( elements[el] );
-    }).join('');
+    const mkpFactory = makeElemMkp(elements);
 
-    const lanthanides = __lanthanides.map( el => {
-        return elemMkp( elements[el] );
-    }).join('');
-
-    const actinides = __actinides.map( el => {
-        return elemMkp( elements[el] );
-    }).join('');
+    const others = __allothers.map(mkpFactory).join('');
+    const lanthanides = __lanthanides.map(mkpFactory).join('');
+    const actinides = __actinides.map(mkpFactory).join('');
 
     const html = tableMkp(others, lanthanides, actinides);
 
@@ -32,11 +28,13 @@ function init(data) {
 
 function render(elementId, mkp) {
     const element = document.querySelector(`#${elementId}`);
-
     element.innerHTML = mkp;
+}
 
-    return;
-
+function makeElemMkp(elems) {
+    return function(name) {
+        return elemMkp(elems[name]);
+    }
 }
 
 function elemMkp( data ) {
