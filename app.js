@@ -39,11 +39,17 @@ function makeElemMkp(elems) {
 
 function elemMkp( data ) {
     const item = ( data => {
-        return `<div class="card element-${data.number} element-${data.symbol.toLowerCase()}">
+        return `<div class="card element-${data.number} element-${data.symbol.toLowerCase()} ${quickSlug(data.category)}">
                     <div class="card-content">
                         <div class="content">
-                        <div class="card-name">${data.symbol}</div>
-                        <div class="description"></div>
+                            <div class="card-metrics">
+                            <h3>${data.number}</h3>  
+                            <p><small>${data.atomic_mass.toFixed(4)}</small></p>
+                            </div>
+                            <div class="card-name">
+                                <h1>${data.symbol}</h1>
+                                <p><small>${data.name}</small></p>                            
+                            </div>
                         </div>
                     </div>
                 </div>`;
@@ -65,4 +71,8 @@ function tableMkp( others, lanthanides, actinides) {
             <div class='card card-empty'></div> 
         </div>
     `;
+}
+
+function quickSlug(str) {
+    return !!str && str.split(' ').join('-');
 }

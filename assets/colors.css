@@ -1,0 +1,47 @@
+.card {
+    background-color: #9c9a9b;
+    color: #fbfffe;
+}
+.card-empty {
+    background-color: transparent;
+}
+
+.actinide {
+    background-color: #d146a3;
+}
+
+.alkali-metal {
+    background-color: #f13420;
+}
+
+.alkaline-earth-metal {
+    background-color: #f87c26;
+}
+
+.diatomic-nonmetal {
+    background-color: #60af42;
+}
+
+.lanthanide {
+    background-color: #6e57af;
+}
+
+.metalloid {
+    background-color: #b2792a;
+}
+
+.noble-gas {
+    background-color: #3dc2e3;
+}
+
+.polyatomic-nonmetal {
+    background-color: #5ac287;
+}
+
+.post-transition-metal {
+    background-color: #406285;
+}
+
+.transition-metal {
+    background-color: #3572b3;
+}
