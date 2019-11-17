@@ -1,23 +1,33 @@
 @import 'grid.css';
+@import 'colors.css';
 
 body {
     padding: 0;
     margin: 0;
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; */
 }
 #app {
     padding: 32px;
-    width: 100%;
+    width: 100vw;
+    box-sizing: border-box;
 }
 .card {
-    padding: 8px;
+    padding-top: 100%;
     border: 2px solid #333;
-    color: #333;
+    box-sizing: border-box;
+    position: relative;
 }
+    .card-content {
+        position: absolute;
+        top: 0;
+  right:0;
+  left: 0;
+  bottom: 0;
+    }
     .card-name {
         font-weight: bold;
         font-size: 16px;
