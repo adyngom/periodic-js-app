@@ -43,12 +43,12 @@ function elemMkp( data ) {
                     <div class="card-content">
                         <div class="content">
                             <div class="card-metrics">
-                            <h3>${data.number}</h3>  
-                            <p><small>${data.atomic_mass.toFixed(4)}</small></p>
+                                <h3>${data.number}</h3>  
                             </div>
                             <div class="card-name">
                                 <h1>${data.symbol}</h1>
-                                <p><small>${data.name}</small></p>                            
+                                <p>${data.name}</p>   
+                                <!--<p>${data.atomic_mass.toFixed(4)}</p>-->                         
                             </div>
                         </div>
                     </div>
