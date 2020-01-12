@@ -1,0 +1,36 @@
+{
+  "name": "periodic",
+  "version": "1.0.0",
+  "description": "An experiment with Vanilla JS and CSS grid to build the periodic table of elements",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adyngom/periodic-js-app.git"
+  },
+  "keywords": [
+    "periodic",
+    "table",
+    "javascript",
+    "es6",
+    "vanilla",
+    "js",
+    "css",
+    "grid"
+  ],
+  "author": "Ady Ngom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adyngom/periodic-js-app/issues"
+  },
+  "homepage": "https://github.com/adyngom/periodic-js-app#readme",
+  "dependencies": {
+    "webpack": "^4.41.5"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0"
+  }
+}
