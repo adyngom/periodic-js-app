@@ -4,7 +4,8 @@
   "description": "An experiment with Vanilla JS and CSS grid to build the periodic table of elements",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -27,10 +28,17 @@
   },
   "homepage": "https://github.com/adyngom/periodic-js-app#readme",
   "dependencies": {
-    "webpack": "^4.41.5"
+    "@babel/polyfill": "^7.8.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/preset-env": "^7.8.0",
+    "@babel/register": "^7.8.0",
     "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
