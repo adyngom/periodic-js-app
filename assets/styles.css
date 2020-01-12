@@ -1,73 +1,125 @@
-@import 'grid.css';
-@import 'colors.css';
+@import "grid.css";
+@import "colors.css";
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: "Cambay", serif;
-    font-size: 1.6em;
-    /* display: flex;
+  padding: 0;
+  margin: 0;
+  font-family: "Cambay", serif;
+  font-size: 1.6em;
+  position: relative;
+  /* display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh; */
 }
 /** quick reset **/
-    h1, h2, h3, h4, h5, h6, p, ul {
-        margin: 0;
-        padding: 0;
-    }
-    ul, li {
-        list-style: none;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
 /** end quick reset **/
 
-h1, h2 {
-    font-family: "Montserrat", serif;
+h1,
+h2 {
+  font-family: "Montserrat", serif;
 }
 
 #app {
-    padding: 16px;
-    width: 100vw;
-    box-sizing: border-box;
+  padding: 16px;
+  width: 100vw;
+  box-sizing: border-box;
 }
 .card {
-    padding-top: 100%;
-    border: 2px solid #333;
-    box-sizing: border-box;
-    position: relative;
+  padding-top: 100%;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
 }
-    .content {
-        width: 100%;
-        padding: 2px;
-        font-size: 1.25vh;
-    }
-    .card-metrics {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 4px;
-    }
-    .card-content {
-        position: absolute;
-        top: 0;
-        right:0;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .card-name {
-        font-weight: bold;
-        text-align: center;
-        line-height: auto;
-    }
-        .card-name > h1 {
-            font-size: 3.2em;
-        }
+.card > * {
+  pointer-events: none;
+}
+.content {
+  width: 100%;
+  padding: 2px;
+  font-size: 1.25vh;
+}
+.card-metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+.card-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-name {
+  font-weight: bold;
+  text-align: center;
+  line-height: auto;
+}
+.card-name > h1 {
+  font-size: 3.2em;
+}
 .card-empty {
-    border: none;
+  border: none;
+}
+
+.full-screen {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#element-page {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+}
+.element-card {
+  position: relative;
+}
+
+.reveal {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#element-page {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: 100%;
+}
+.element-card {
+  position: relative;
 }
