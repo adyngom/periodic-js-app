@@ -1,3 +1,4 @@
+import "./assets/styles.css";
 async function getTable() {
   try {
     let response = await fetch("https://api.myjson.com/bins/z24ty");
