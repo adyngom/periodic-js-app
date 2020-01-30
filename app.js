@@ -3,6 +3,7 @@ async function getTable() {
   try {
     let response = await fetch("https://api.myjson.com/bins/z24ty");
     let data = response.json();
+    console.log(data);
     return data;
   } catch (err) {
     throw err;
